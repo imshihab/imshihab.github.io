@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import HomeView from './Pages/HomeView';
-import { GithubIcon, GmailIcon, LinkedInIcon } from './Components/ICONS';
+import { CloseIcon, GithubIcon, GmailIcon, LinkedInIcon, MenuIcon } from './Components/ICONS';
 
 function App() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -43,7 +43,7 @@ function App() {
                             <button
                                 key={item.id}
                                 onClick={() => scrollToSection(item.id)}
-                                className={`hover:text-[#34A853] transition-colors cursor-pointer`}
+                                className={`hover:text-[#34A853] transition-colors cursor-pointer nav-link`}
                             >
                                 /{item.label}
                             </button>
@@ -52,10 +52,10 @@ function App() {
 
                     {/* Mobile Toggle */}
                     <button
-                        className="lg:hidden p-2 border-2 border-black hover:bg-[#34A853] hover:text-white transition-colors"
+                        className="lg:hidden p-2 border-2 border-black hover:bg-[#34A853] hover:text-white transition-colors cursor-pointer"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                     >
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2" d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}></path></svg>
+                        {isMenuOpen ? <CloseIcon fill="none" stroke="currentColor" /> : <MenuIcon fill="none" stroke="currentColor" />}
                     </button>
                 </div>
 
@@ -66,7 +66,7 @@ function App() {
                             <button
                                 key={item.id}
                                 onClick={() => scrollToSection(item.id)}
-                                className={`text-left border-b-2 border-transparent hover:border-[#34A853] pb-1`}
+                                className={`hover:text-[#34A853] text-left pb-1 cursor-pointer nav-link`}
                             >
                                 /{item.label}
                             </button>
