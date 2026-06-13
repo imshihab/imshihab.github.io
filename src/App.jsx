@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import HomeView from './Pages/HomeView';
-import { CloseIcon, GithubIcon, GmailIcon, LinkedInIcon, MenuIcon } from './Components/ICONS';
+import { CloseIcon, DesktopWindowsIcon, GithubIcon, GmailIcon, LinkedInIcon, MenuIcon } from './Components/ICONS';
+import Workspace from './Components/Workspace';
 
 function App() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -94,8 +95,14 @@ function App() {
                 <section id="profiles" className="py-20 border-t-4 border-black">
                     <h2 className="text-4xl font-black uppercase tracking-tighter">Coding Profiles</h2>
                 </section>
-                <section id="workspace" className="py-20 border-t-4 border-black">
-                    <h2 className="text-4xl font-black uppercase tracking-tighter">Workspace Setup</h2>
+
+                <section id="workspace" className="animate-fade-up delay-500 py-20 border-t-4">
+                    <div className="flex items-center gap-3 border-b-4 border-black pb-2 mb-8">
+                        <DesktopWindowsIcon size={32} className="text-[#34A853]" />
+                        <h2 className="text-4xl font-black uppercase">My Workspace Setup</h2>
+                    </div>
+
+                    <Workspace />
                 </section>
             </main>
 
