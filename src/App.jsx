@@ -5,8 +5,11 @@ import {
     CodeBlockIcon,
     CodeIcon,
     DesktopWindowsIcon,
+    DiscordIcon,
+    FacebookIcon,
     GithubIcon,
     GmailIcon,
+    InstagramIcon,
     LinkedInIcon,
     MenuIcon,
     TrophyIcon,
@@ -262,12 +265,27 @@ function App() {
                         <SocialLink
                             icon={<GithubIcon size={24} />}
                             text="Github"
-                            href="#"
+                            href="https://github.com/imshihab"
                         />
                         <SocialLink
                             icon={<LinkedInIcon size={24} />}
                             text="LinkedIn"
-                            href="#"
+                            href="https://www.linkedin.com/in/saharia-shihab/"
+                        />
+                        <SocialLink
+                            icon={<DiscordIcon size={24} />}
+                            text="Discord"
+                            href="https://discord.com/users/795975414451142657"
+                        />
+                        <SocialLink
+                            icon={<InstagramIcon size={24} />}
+                            text="Instagram"
+                            href="https://www.instagram.com/saharia_shihab"
+                        />
+                        <SocialLink
+                            icon={<FacebookIcon size={24} />}
+                            text="Facebook"
+                            href="https://www.facebook.com/iamSahariaShihab/"
                         />
                     </div>
                 </div>

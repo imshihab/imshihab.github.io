@@ -15,6 +15,29 @@ function HomeView() {
                     </span>
                 </h1>
 
+                <div className="relative inline-block mt-4 transform rotate-1">
+                    <div className="absolute inset-0 bg-[#FFB800] border-4 border-black translate-x-3 translate-y-3" />
+                    <div className="relative bg-white border-4 border-black brutal-shadow-sm">
+                        <div className="bg-[#34A853] text-white border-b-4 border-black px-4 py-2 font-black uppercase tracking-widest text-xs flex items-center gap-2">
+                            <span className="inline-flex items-center justify-center bg-white text-black border-2 border-black w-6 h-6 text-sm brutal-shadow-sm">
+                                ⚡
+                            </span>
+                            Dev Equation
+                        </div>
+                        <div className="px-5 py-4 flex flex-wrap items-center gap-2 md:gap-3 font-ph text-xl md:text-2xl font-black">
+                            <span className="inline-flex items-center gap-2 bg-[#f4f4f0] border-2 border-black px-3 py-1 brutal-shadow-sm">
+                                💻 energy
+                            </span>
+                            <span className="text-3xl md:text-4xl leading-none">
+                                =
+                            </span>
+                            <span className="inline-flex items-center bg-[#34A853] text-white border-2 border-black px-3 py-1 brutal-shadow-sm">
+                                more code<sup className="text-sm ml-0.5">2</sup>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
                 <div className="flex flex-wrap gap-4 text-lg font-medium mt-6">
                     <div className="flex items-center gap-2 bg-white border-2 border-black px-4 py-2 brutal-shadow-sm">
                         <MapPin size={20} className="text-[#34A853]" /> Cumilla,
