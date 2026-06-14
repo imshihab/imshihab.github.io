@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+:root {
+    --scroll-gap: 16px;
+}
+
+html {
+    scroll-padding-top: calc(var(--nav-height, 5.5rem) + var(--scroll-gap));
+}
+
+section[id] {
+    scroll-margin-top: calc(var(--nav-height, 5.5rem) + var(--scroll-gap));
+}
 
 .font-ph {
     font-family: 'Patrick Hand', cursive;

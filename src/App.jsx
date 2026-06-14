@@ -1,11 +1,29 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import HomeView from './Pages/HomeView';
-import { CloseIcon, DesktopWindowsIcon, GithubIcon, GmailIcon, LinkedInIcon, MenuIcon } from './Components/ICONS';
+import { CloseIcon, CodeIcon, DesktopWindowsIcon, GithubIcon, GmailIcon, LinkedInIcon, MenuIcon, TrophyIcon } from './Components/ICONS';
 import Workspace from './Components/Workspace';
 import Profiles from './Components/Profiles';
+import Achievements from './Components/Achievements';
 
 function App() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const navRef = useRef(null);
+
+    useEffect(() => {
+        const nav = navRef.current;
+        if (!nav) return;
+
+        const updateNavHeight = () => {
+            document.documentElement.style.setProperty('--nav-height', `${nav.offsetHeight}px`);
+        };
+
+        updateNavHeight();
+
+        const observer = new ResizeObserver(updateNavHeight);
+        observer.observe(nav);
+
+        return () => observer.disconnect();
+    }, [isMenuOpen]);
 
     const navItems = [
         { id: 'projects', label: 'Projects' },
@@ -19,7 +37,7 @@ function App() {
     const scrollToSection = (id) => {
         const element = document.getElementById(id);
         if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
         setIsMenuOpen(false);
     };
@@ -31,7 +49,7 @@ function App() {
                 style={{ backgroundImage: 'linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)', backgroundSize: '40px 40px' }}>
             </div>
 
-            <nav className="sticky top-0 z-40 bg-[#f4f4f0 pb-1 pt-4 px-6 md:px-10">
+            <nav ref={navRef} className="sticky top-0 z-40 bg-[#f4f4f0 pb-1 pt-4 px-6 md:px-10">
                 <div className="max-w-6xl mx-auto flex justify-between items-center bg-white border-4 border-black p-4 brutal-shadow-sm">
                     <div
                         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
@@ -80,7 +98,6 @@ function App() {
             <main className="grow max-w-6xl mx-auto px-6 py-12 md:py-20 relative z-10 w-full">
                 <HomeView />
 
-                {/* Placeholders for sections to enable scrolling */}
                 <section id="projects" className="py-20 border-t-4 border-black mt-10">
                     <h2 className="text-4xl font-black uppercase tracking-tighter">Selected Projects</h2>
                 </section>
@@ -91,10 +108,19 @@ function App() {
                     <h2 className="text-4xl font-black uppercase tracking-tighter">Tech Arsenal</h2>
                 </section>
                 <section id="achievements" className="py-20 border-t-4 border-black">
-                    <h2 className="text-4xl font-black uppercase tracking-tighter">Achievements</h2>
+                    <div className="flex items-center gap-3 border-b-4 border-black pb-2 mb-8">
+                        <TrophyIcon size={32} className="text-[#34A853]" />
+                        <h2 className="text-4xl font-black uppercase">Achievements</h2>
+                    </div>
+
+                    <Achievements />
                 </section>
                 <section id="profiles" className="py-20 border-t-4 border-black">
-                    <h2 className="text-4xl font-black uppercase tracking-tighter">Coding Profiles</h2>
+                    <div className="flex items-center gap-3 border-b-4 border-black pb-2 mb-8">
+                        <CodeIcon size={32} className="text-[#34A853]" />
+                        <h2 className="text-4xl font-black uppercase">Coding Profiles</h2>
+                    </div>
+
                     <Profiles />
                 </section>
 
