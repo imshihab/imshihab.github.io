@@ -15,6 +15,8 @@ import Workspace from "./Components/Workspace";
 import Profiles from "./Components/Profiles";
 import Achievements from "./Components/Achievements";
 import Tech from "./Components/Tech";
+import { GraduationCap } from "lucide-react";
+import Education from "./Components/Education";
 
 function App() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -137,9 +139,20 @@ function App() {
                     id="education"
                     className="py-20 border-t-4 border-black"
                 >
-                    <h2 className="text-4xl font-black uppercase tracking-tighter">
-                        Education
-                    </h2>
+                    <div className="flex items-center gap-4 border-b-8 border-black pb-4 mb-8">
+                        <div className="bg-[#34A853] p-3 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                            <GraduationCap
+                                size={40}
+                                className="text-white"
+                                strokeWidth={3}
+                            />
+                        </div>
+                        <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter">
+                            Education
+                        </h2>
+                    </div>
+
+                    <Education />
                 </section>
                 <section id="tech" className="py-20 border-t-4 border-black">
                     <div className="flex items-center gap-4 border-b-8 border-black pb-4 mb-8">
