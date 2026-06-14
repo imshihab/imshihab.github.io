@@ -1,9 +1,9 @@
-import React from 'react'
-import { CodeBlockIcon, TrophyIcon } from './ICONS'
+import React from "react";
+import { CodeBlockIcon, TrophyIcon } from "./ICONS";
 
 function Achievements() {
     return (
-        <div className="bg-[#34A853] text-white border-4 border-black p-6 md:p-10 brutal-shadow flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative overflow-hidden group hover:bg-[#2b8a44] transition-colors">
+        <div className="bg-[#34A853] text-white border-4 border-black p-6 md:p-10 brutal-shadow flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative overflow-hidden group hover:bg-[#2b8a44] transition-colors animate-fade-up delay-300">
             <div className="absolute -right-10 -top-10 text-white/10 transform rotate-12 transition-transform duration-500 group-hover:rotate-45 pointer-events-none">
                 <TrophyIcon size={200} />
             </div>
@@ -24,7 +24,7 @@ function Achievements() {
                 <span className="text-4xl font-black text-[#34A853]">3rd</span>
             </div>
         </div>
-    )
+    );
 }
 
-export default Achievements
+export default Achievements;

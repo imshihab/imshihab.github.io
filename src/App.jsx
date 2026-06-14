@@ -14,6 +14,7 @@ import {
 import Workspace from "./Components/Workspace";
 import Profiles from "./Components/Profiles";
 import Achievements from "./Components/Achievements";
+import Tech from "./Components/Tech";
 
 function App() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -143,14 +144,18 @@ function App() {
                 <section id="tech" className="py-20 border-t-4 border-black">
                     <div className="flex items-center gap-4 border-b-8 border-black pb-4 mb-8">
                         <div className="bg-[#34A853] p-3 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                            <CodeBlockIcon size={40} className="text-white" strokeWidth={3} />
+                            <CodeBlockIcon
+                                size={40}
+                                className="text-white"
+                                strokeWidth={3}
+                            />
                         </div>
                         <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter">
                             Tech Arsenal
                         </h2>
                     </div>
 
-
+                    <Tech />
                 </section>
                 <section
                     id="achievements"
@@ -158,7 +163,11 @@ function App() {
                 >
                     <div className="flex items-center gap-4 border-b-8 border-black pb-4 mb-8">
                         <div className="bg-[#34A853] p-3 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                            <TrophyIcon size={40} className="text-white" strokeWidth={3} />
+                            <TrophyIcon
+                                size={40}
+                                className="text-white"
+                                strokeWidth={3}
+                            />
                         </div>
                         <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter">
                             Achievements
@@ -173,7 +182,11 @@ function App() {
                 >
                     <div className="flex items-center gap-4 border-b-8 border-black pb-4 mb-8">
                         <div className="bg-[#34A853] p-3 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                            <CodeIcon size={40} className="text-white" strokeWidth={3} />
+                            <CodeIcon
+                                size={40}
+                                className="text-white"
+                                strokeWidth={3}
+                            />
                         </div>
                         <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter">
                             Coding Profiles
@@ -183,14 +196,14 @@ function App() {
                     <Profiles />
                 </section>
 
-                <section
-                    id="workspace"
-                    className="animate-fade-up delay-500 py-20 border-t-4"
-                >
+                <section id="workspace" className="py-20 border-t-4">
                     <div className="flex items-center gap-4 border-b-8 border-black pb-4 mb-8">
                         <div className="bg-[#34A853] p-3 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                            <DesktopWindowsIcon size={40}
-                                className="text-[#FFF]" strokeWidth={3} />
+                            <DesktopWindowsIcon
+                                size={40}
+                                className="text-[#FFF]"
+                                strokeWidth={3}
+                            />
                         </div>
                         <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter">
                             My Workspace Setup

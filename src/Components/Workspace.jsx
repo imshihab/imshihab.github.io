@@ -143,7 +143,7 @@ function Workspace() {
     ];
 
     return (
-        <div className="border-4 border-black rounded-lg overflow-hidden brutal-shadow bg-[#1e1e2e] text-gray-300 font-mono text-sm md:text-base">
+        <div className="border-4 border-black rounded-lg overflow-hidden brutal-shadow bg-[#1e1e2e] text-gray-300 font-mono text-sm md:text-base animate-fade-up delay-500 ">
             <div className="min-h-screen bg-[#000000] p-4 md:p-8 flex items-center flex-col gap-8 justify-center font-sans">
                 <style
                     dangerouslySetInnerHTML={{
