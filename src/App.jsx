@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import HomeView from "./Pages/HomeView";
 import {
     CloseIcon,
+    CodeBlockIcon,
     CodeIcon,
     DesktopWindowsIcon,
     GithubIcon,
@@ -140,17 +141,26 @@ function App() {
                     </h2>
                 </section>
                 <section id="tech" className="py-20 border-t-4 border-black">
-                    <h2 className="text-4xl font-black uppercase tracking-tighter">
-                        Tech Arsenal
-                    </h2>
+                    <div className="flex items-center gap-4 border-b-8 border-black pb-4 mb-8">
+                        <div className="bg-[#34A853] p-3 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                            <CodeBlockIcon size={40} className="text-white" strokeWidth={3} />
+                        </div>
+                        <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter">
+                            Tech Arsenal
+                        </h2>
+                    </div>
+
+
                 </section>
                 <section
                     id="achievements"
                     className="py-20 border-t-4 border-black"
                 >
-                    <div className="flex items-center gap-3 border-b-4 border-black pb-2 mb-8">
-                        <TrophyIcon size={32} className="text-[#34A853]" />
-                        <h2 className="text-4xl font-black uppercase">
+                    <div className="flex items-center gap-4 border-b-8 border-black pb-4 mb-8">
+                        <div className="bg-[#34A853] p-3 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                            <TrophyIcon size={40} className="text-white" strokeWidth={3} />
+                        </div>
+                        <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter">
                             Achievements
                         </h2>
                     </div>
@@ -161,9 +171,11 @@ function App() {
                     id="profiles"
                     className="py-20 border-t-4 border-black"
                 >
-                    <div className="flex items-center gap-3 border-b-4 border-black pb-2 mb-8">
-                        <CodeIcon size={32} className="text-[#34A853]" />
-                        <h2 className="text-4xl font-black uppercase">
+                    <div className="flex items-center gap-4 border-b-8 border-black pb-4 mb-8">
+                        <div className="bg-[#34A853] p-3 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                            <CodeIcon size={40} className="text-white" strokeWidth={3} />
+                        </div>
+                        <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter">
                             Coding Profiles
                         </h2>
                     </div>
@@ -175,12 +187,12 @@ function App() {
                     id="workspace"
                     className="animate-fade-up delay-500 py-20 border-t-4"
                 >
-                    <div className="flex items-center gap-3 border-b-4 border-black pb-2 mb-8">
-                        <DesktopWindowsIcon
-                            size={32}
-                            className="text-[#34A853]"
-                        />
-                        <h2 className="text-4xl font-black uppercase">
+                    <div className="flex items-center gap-4 border-b-8 border-black pb-4 mb-8">
+                        <div className="bg-[#34A853] p-3 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                            <DesktopWindowsIcon size={40}
+                                className="text-[#FFF]" strokeWidth={3} />
+                        </div>
+                        <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter">
                             My Workspace Setup
                         </h2>
                     </div>

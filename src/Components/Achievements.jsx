@@ -20,7 +20,7 @@ function Achievements() {
                 </p>
             </div>
 
-            <div className="relative z-10 hidden md:flex items-center justify-center bg-white border-4 border-black w-28 h-28 rounded-full brutal-shadow shrink-0 transform group-hover:scale-110 transition-transform">
+            <div className="relative z-10 hidden md:flex items-center justify-center bg-white border-4 border-black w-28 h-28 brutal-shadow shrink-0 transform group-hover:scale-110 transition-transform">
                 <span className="text-4xl font-black text-[#34A853]">3rd</span>
             </div>
         </div>
