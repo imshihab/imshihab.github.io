@@ -15,8 +15,9 @@ import Workspace from "./Components/Workspace";
 import Profiles from "./Components/Profiles";
 import Achievements from "./Components/Achievements";
 import Tech from "./Components/Tech";
-import { GraduationCap } from "lucide-react";
+import { FolderGit2, GraduationCap } from "lucide-react";
 import Education from "./Components/Education";
+import Projects from "./Components/Projects";
 
 function App() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -131,9 +132,20 @@ function App() {
                     id="projects"
                     className="py-20 border-t-4 border-black mt-10"
                 >
-                    <h2 className="text-4xl font-black uppercase tracking-tighter">
-                        Selected Projects
-                    </h2>
+                    <div className="flex items-center gap-4 border-b-8 border-black pb-4 mb-8">
+                        <div className="bg-[#34A853] p-3 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                            <FolderGit2
+                                size={40}
+                                className="text-white"
+                                strokeWidth={3}
+                            />
+                        </div>
+                        <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter">
+                            Selected Projects
+                        </h2>
+                    </div>
+
+                    <Projects />
                 </section>
                 <section
                     id="education"
